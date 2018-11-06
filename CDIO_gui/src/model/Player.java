@@ -1,57 +1,9 @@
-/*
 package model;
 
-*/
-/**@author Hold 44
- * @version 11/10-2018
- *
- * Defines Player class and all if its attributes
- *//*
+import gui_fields.GUI_Player;
 
-public class Player {
-    private int totalScore; //Totalscore of player
-    private String number;  //Number of player
-
-    */
-/**
-     * Constructor for player
-     *
-     * @param number    Player number
-     *
-     *//*
-
-    public Player(String number, int totalScore){
-        this.number = number;
-        this.totalScore = totalScore;
-    }
-
-    */
-/**
-     * Get and set methods of total score and method for adding to score.
-     *
-     * @return  total score of Player
-     *//*
-
-    public int getTotalScore() {
-        return totalScore;
-    }
-    public void setTotalScore(int totalScore){
-        this.totalScore = totalScore;
-    }
-    public int addToScore(int roll){
-        this.totalScore = totalScore + roll;
-        return totalScore;
-    }
-
-    */
-/**
-     * Get method of player number
-     *
-     * @return  player number
-     *//*
-
-    public String getNumber(){
-        return number;
+public class Player extends GUI_Player {
+    public Player(String name, int balance) {
+        super(name, balance);
     }
 }
-*/
