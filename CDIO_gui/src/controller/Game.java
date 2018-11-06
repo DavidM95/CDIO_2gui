@@ -4,14 +4,15 @@ import gui_fields.GUI_Player;
 import gui_main.GUI;
 import model.Board;
 import model.Die;
+import model.Player;
 import ui.Graphic;
 
 /**@author Hold 44
  * Defines Game and all its global variables
  */
 public class Game {
-    private GUI_Player[] players;
-    GUI_Player currPlayer;
+    private Player[] players;
+    Player currPlayer;
     private Graphic graphic;
     private Die d1, d2;                     //Instances of Die
     private Board board;
@@ -23,9 +24,9 @@ public class Game {
      */
     public Game() {
         // initer spillerne
-        this.players = new GUI_Player[2];
-        this.players[0] = new GUI_Player("Spiller 1", 1000);
-        this.players[1] = new GUI_Player("Spiller 2", 1000);
+        this.players = new Player[2];
+        this.players[0] = new Player("Spiller 1", 1000);
+        this.players[1] = new Player("Spiller 2", 1000);
         // initer terningerne
         this.d1 = new Die(1,6);
         this.d2 = new Die(1,6);

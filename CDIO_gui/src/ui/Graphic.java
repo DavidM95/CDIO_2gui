@@ -5,6 +5,7 @@ import gui_fields.GUI_Player;
 import gui_fields.GUI_Street;
 import gui_main.GUI;
 import model.Die;
+import model.Player;
 import model.Square;
 
 import java.awt.*;
@@ -13,9 +14,9 @@ public class Graphic {
 
     private GUI gui;
     private GUI_Field[] fields;
-    private GUI_Player[] players;
+    private Player[] players;
 
-    public Graphic(Square[] squares, GUI_Player[] players) {
+    public Graphic(Square[] squares, Player[] players) {
         this.setPlayers(players);
         this.setFields(squares);
         this.gui = new GUI(this.fields);
@@ -34,20 +35,20 @@ public class Graphic {
         }
     }
 
-    public GUI_Player[] getPlayers() {
+    public Player[] getPlayers() {
         return this.players;
     }
 
-    public void setPlayers(GUI_Player[] inputPlayers)
+    public void setPlayers(Player[] inputPlayers)
     {
-        this.players = new GUI_Player[inputPlayers.length];
+        this.players = new Player[inputPlayers.length];
         for (int i = 0; i < inputPlayers.length; i++)
         {
             this.players[i] = inputPlayers[i];
         }
     }
 
-    public void movePlayer(GUI_Player player, int oldPosition, int newPosition)
+    public void movePlayer(Player player, int oldPosition, int newPosition)
     {
         this.fields[oldPosition].setCar(player, false);
         this.fields[newPosition].setCar(player, true);
